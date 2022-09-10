@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
     height: 100vh;
     background: url("../assets/main.jpg");
@@ -8,7 +8,7 @@ body{
     box-sizing: border-box;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -16,66 +16,51 @@ body{
     color: white;
 }
 
-h1{
+h1 {
     color: white;
     text-align: center;
 }
 
-.search-container{
+.search-container {
     margin: 30px;
 }
 
-.search-container input{
+.search-container input {
     font-size: 1.3em;
     border-radius: 0;
     border: none;
-
+    padding: 0.625em;
 }
 
-
-.search-container input:focus{
+.search-container input:focus {
     outline: none;
-    border: 2px groove #393E46; 
+    border: 2px groove #393E46;
 }
 
-.search-container button{
+.search-container button {
     font-size: 1.3em;
     border: none;
     background-color: white;
+    padding: 0.625em;
 }
 
-.search-container button:hover{
+.search-container button:hover {
     font-size: 1.3em;
     border: none;
     background: grey;
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-/* .card{
-    padding: 10px;
-    background-color: #393E46;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-}
-
-.card img{
-    width: 17em;
-    height: 25em;
-} */
-
-.card{
+.card {
     padding: 10px;
     background-color: #393E46;
     margin: 5px;
@@ -84,14 +69,14 @@ h2{
     align-items: flex-start;
     flex-wrap: nowrap;
     border: 2px solid black;
-    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
     cursor: pointer;
-    transition: all 1.5s cubic-bezier(.8,.5,.2,1.4);
+    transition: all 1.5s cubic-bezier(.8, .5, .2, 1.4);
     overflow: hidden;
     position: relative;
 }
 
-.card-hover{
+.card-hover {
     padding: 10px;
     background-color: #393E46;
     margin: 5px;
@@ -100,24 +85,25 @@ h2{
     align-items: flex-start;
     flex-wrap: nowrap;
     border: 2px solid black;
-    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
     cursor: pointer;
     overflow: hidden;
     position: relative;
-} 
+}
 
-.card-poster{
+.card-poster {
     width: 17em;
     height: 25em;
-    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
 }
-.descriptions{
+
+.descriptions {
     position: absolute;
-    top:0px;
-    left:0px;
-    background-color: rgba(255,255,255,.7);
-    width:100%;
-    height:100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 100%;
     transition: all 0s ease-in-out;
     padding: 20px;
     box-sizing: border-box;
@@ -125,22 +111,46 @@ h2{
     color: #393E46;
 }
 
-.descriptions .movie-plot{
+.descriptions .movie-plot {
     text-align: justify;
-    word-spacing:-2px;
+    word-spacing: -2px;
 }
-.card-hover:hover .descriptions{
-    left:0px;
-    transition: all  1s ease-in-out;
+
+.card-hover:hover .descriptions {
+    left: 0px;
+    transition: all 1s ease-in-out;
     clip-path: circle(75%);
 }
-.card-hover:hover{
-    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
-    box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+
+.card-hover:hover {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, .3);
     transform: scale(.97);
 }
-.card-hover:hover img{
-    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+
+.card-hover:hover img {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
     transform: scale(1.6) rotate(20deg);
     filter: blur(3px);
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        max-width: 100%;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        max-width: 100%;
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        max-width: 100%;
+        font-size: 8px;
+    }
 }

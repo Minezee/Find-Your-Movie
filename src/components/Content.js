@@ -16,8 +16,6 @@ const Content = () => {
                 if ((result.Response === "True")) {
                     setMovies(result.Search)
                     setIsSearch(false)
-                } else {
-                    console.log('err')
                 }
             })
     }
@@ -27,8 +25,8 @@ const Content = () => {
             .then(response => response.json())
             .then(response => {
                 setMovieData(response)
+                setIsActive(true)
             })
-            setIsActive(true)
     }
 
     return (
@@ -54,7 +52,6 @@ const Content = () => {
                                 handleMouseClick(result.imdbID, index)
                             }}
                             onMouseLeave={()=>setIsActive(false)}
-
                         >
                             <img className="card-poster" src={result.Poster}></img>
                             <div className="descriptions">
