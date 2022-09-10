@@ -33,7 +33,14 @@ const Content = () => {
         <div>
             <nav className="navbar">
                 <div className="search-container">
-                    <input id="input-keyword" type="text" placeholder="Search.." name="search"></input>
+                    <input id="input-keyword" type="text" placeholder="Search.." name="search"
+                    onKeyUp={(e)=>{
+                        const searchButton = document.getElementById('search-button');
+                        if(e.key === 'Enter'){
+                            searchButton.click();
+                        }
+                    }}
+                    ></input>
                     <button id="search-button" onClick={() => {
                         let input = document.getElementById('input-keyword').value
                         setInputVal(input)
