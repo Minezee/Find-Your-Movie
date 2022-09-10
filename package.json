@@ -1,8 +1,8 @@
 {
   "name": "find-your-movie",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "https://minezee.github.io/find-your-movie",
+  "homepage": "https://minezee.github.io/Find-Your-Movie",
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
