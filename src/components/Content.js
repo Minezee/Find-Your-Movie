@@ -20,12 +20,11 @@ const Content = () => {
             })
     }
 
-    function handleMouseClick(data, index) {
+    function handleMouseClick(data) {
         fetch(`http://www.omdbapi.com/?apikey=1866b12e&i=${data}`)
             .then(response => response.json())
             .then(response => {
                 setMovieData(response)
-                setIsActive(true)
             })
     }
 
@@ -55,9 +54,13 @@ const Content = () => {
                     return (
                         <div id={index} className={
                             isActive ? "card-hover" : "card"} key={index}
-                            onClick={() => {
-                                handleMouseClick(result.imdbID, index)
+                            onMouseOver={()=>{
+                                handleMouseClick(result.imdbID)
                             }}
+                            onClick={() => {
+                                setIsActive(true)
+                            }}
+                            
                             onMouseLeave={()=>setIsActive(false)}
                         >
                             <img className="card-poster" src={result.Poster}></img>
