@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Find-Your-Movie/static/css/main.56b36a46.css",
-    "main.js": "/Find-Your-Movie/static/js/main.7e4fadfe.js",
+    "main.js": "/Find-Your-Movie/static/js/main.a3f0e3cd.js",
     "static/media/main.jpg": "/Find-Your-Movie/static/media/main.4a912a242568343fea42.jpg",
     "index.html": "/Find-Your-Movie/index.html",
     "main.56b36a46.css.map": "/Find-Your-Movie/static/css/main.56b36a46.css.map",
-    "main.7e4fadfe.js.map": "/Find-Your-Movie/static/js/main.7e4fadfe.js.map"
+    "main.a3f0e3cd.js.map": "/Find-Your-Movie/static/js/main.a3f0e3cd.js.map"
   },
   "entrypoints": [
     "static/css/main.56b36a46.css",
-    "static/js/main.7e4fadfe.js"
+    "static/js/main.a3f0e3cd.js"
   ]
 }
