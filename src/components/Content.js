@@ -32,7 +32,7 @@ const Content = () => {
         <div>
             <nav className="navbar">
                 <div className="search-container">
-                    <input id="input-keyword" type="text" placeholder="Search.." name="search"
+                    <input id="input-keyword" type="text" placeholder="Search.." name="search" autoComplete="off" 
                     onKeyUp={(e)=>{
                         const searchButton = document.getElementById('search-button');
                         if(e.key === 'Enter'){
@@ -54,21 +54,25 @@ const Content = () => {
                     return (
                         <div id={index} className={
                             isActive ? "card-hover" : "card"} key={index}
-                            onMouseOver={()=>{
-                                handleMouseClick(result.imdbID)
-                            }}
                             onClick={() => {
+                                handleMouseClick(result.imdbID)
                                 setIsActive(true)
                             }}
-                            
-                            onMouseLeave={()=>setIsActive(false)}
+                            onMouseLeave={()=>{
+                                setMovieData([])
+                                setIsActive(false)}
+                            }
                         >
                             <img className="card-poster" src={result.Poster}></img>
                             <div className="descriptions">
-                                <h2>{movieData.Title}</h2>
-                                <p className="movie-plot">{movieData.Plot}</p>
-                                <p><b>Release date : </b>{movieData.Released}</p>
-                                <p><b>Actor: </b>{movieData.Actors}</p>
+                            {movieData.length === 0 ? 
+                                <p className="data-loading">Loading...</p> :
+                                <div>
+                                    <h2>{movieData.Title}</h2>
+                                    <p className="movie-plot">{movieData.Plot}</p>
+                                    <p><b>Release date : </b>{movieData.Released}</p>
+                                    <p><b>Actor: </b>{movieData.Actors}</p>
+                                </div> }
                             </div>
                         </div>
                     )

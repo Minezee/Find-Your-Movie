@@ -111,6 +111,12 @@ h2 {
     color: #393E46;
 }
 
+.data-loading{
+    text-align-last: center;
+    padding: 50% 0%;
+    font-size: 20px;
+}
+
 .descriptions .movie-plot {
     text-align: justify;
     word-spacing: -2px;
